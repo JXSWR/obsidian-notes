@@ -26,7 +26,7 @@
 
 ## 3. 代码结构与文件职责
 
-代码目录：`D:\repos\My project workspace\产品开发\cimatron二次开发\dev\Cimatron-API-C---Example\ClassLibrary1\`
+代码目录：`D:\repos\My project workspace\产品开发\淬锋应用\dev\Cimatron-API-C---Example\ClassLibrary1\`
 
 | 文件 | 职责 |
 |---|---|
@@ -43,7 +43,7 @@
 | ~~`CimInfoCommand.cs`~~ | 已删除（8/29，流程验证功能下线）|
 | ~~`Class1.cs`(OpenWindowsForm)~~ | 已删除（8/29，空模板命令）|
 
-> 独立工具（不在 csproj 内，`cimatron二次开发\CimatronProbe\`）：`version_probe.py`（pythonnet 反射验证跨版本接口，免编译）、`CimatronProbe.cs`（同功能 C# 版，需 VS 编译）
+> 独立工具（不在 csproj 内，`淬锋应用\CimatronProbe\`）：`version_probe.py`（pythonnet 反射验证跨版本接口，免编译）、`CimatronProbe.cs`（同功能 C# 版，需 VS 编译）
 
 ## 4. 功能开发历程（时间线）
 
@@ -194,7 +194,7 @@ Execute → CaptureViews(app, cimDoc)
   - 排查入口：dump 处理前后 PNG 对比；或临时令 `grayRun=0` 关闭灰条处理验证。
 
 - **工具栏名 `My Toolbadsar` 未改**（早期模板乱码名）：它是所有按钮的"家"，改名极易让已拖好的按钮全丢，需单独做并接受重拖代价。待办，非遗漏。
-- **外部命令图标需 GUI 贴**：`ExternalCommands.ini` 里 5 命令仍 `@0`（X 图标占位），要用 Register_API_Commands.exe「命令图表」字段逐个贴 ICO（`cimatron二次开发\cuifeng_icons\`），且必须在注册那一步一起贴。
+- **外部命令图标需 GUI 贴**：`ExternalCommands.ini` 里 5 命令仍 `@0`（X 图标占位），要用 Register_API_Commands.exe「命令图表」字段逐个贴 ICO（`淬锋应用\cuifeng_icons\`），且必须在注册那一步一起贴。
 - **跨版本兼容待验证（产品化 M1 核心）**：本外挂按 Cimatron 2024.0 开发，尚未在 2025/2026 实测。拿到别的版本机器后跑 `CimatronProbe\version_probe.py` 验证关键接口是否齐全。
 - **LicenseChecker 公钥占位**（产品化 M2）：`PublicKeyXml` 还是占位符，正式发布前需生成 RSA 密钥对（私钥留开发者、公钥填代码），并补一个签发工具。
 
@@ -206,12 +206,12 @@ Execute → CaptureViews(app, cimDoc)
 | 旧测试文件 | `程式单_BBBB_NC.xlsx`（更早期，一般不再用）|
 | 当前 NC 源 | `E:\GZ目录\CE2024\beer\CE2024\科硕机加\盖板工装 - 五轴_NC.elt` |
 | 参考程式单 | `DZ_NCSetup15.xlsx`（含加工时间 TOTAL_TIME 等，借鉴排版）|
-| 代码目录 | `D:\repos\My project workspace\产品开发\cimatron二次开发\dev\Cimatron-API-C---Example\ClassLibrary1\` |
+| 代码目录 | `D:\repos\My project workspace\产品开发\淬锋应用\dev\Cimatron-API-C---Example\ClassLibrary1\` |
 | CE 原始 XML | `%TEMP%\CimatronNcProcMgr_*.xml`（命令跑完生成，排查字段用）|
 | 命令登记表 | `C:\ProgramData\Cimatron\Cimatron\2024.0\Data\ExternalCommands.ini`（真正的命令表，Program Files 下 SourceData\ 那份是空模板）|
 | UI 布局缓存 | `C:\ProgramData\Cimatron\Cimatron\2024.0\Data\CommandsLayout.xml`（工具栏/菜单栏分组，删残留壳要 CE 关闭时改这里）|
-| 兼容验证工具 | `D:\repos\My project workspace\产品开发\cimatron二次开发\CimatronProbe\`（version_probe.py 免编译 / CimatronProbe.cs 需 VS 编译）|
-| 命令图标 | `D:\repos\My project workspace\产品开发\cimatron二次开发\cuifeng_icons\`（ICO，注册工具 GUI 贴）|
+| 兼容验证工具 | `D:\repos\My project workspace\产品开发\淬锋应用\CimatronProbe\`（version_probe.py 免编译 / CimatronProbe.cs 需 VS 编译）|
+| 命令图标 | `D:\repos\My project workspace\产品开发\淬锋应用\cuifeng_icons\`（ICO，注册工具 GUI 贴）|
 
 **验证流程**：关 CE → VS 平台下拉 `x64` → F6 → 确认 `bin\x64\Debug\ClassLibrary1.dll` 时间戳变今天 → 开 CE 跑命令 → 弹窗分组/勾视图 → 发回 xlsx → 定量分析验证（结构/图片/坐标/比例）。
 
@@ -227,4 +227,4 @@ Execute → CaptureViews(app, cimDoc)
 - 机床设备总表 → [[机床索引]]
 - 编程模板与规范 → [[模板索引]]（后处理走 Cimatron 路线，UG/Mastercam 空壳已删）
 - 编程全流程 → [[数控编程流程]]
-- 代码与工具 → `50_项目实践\02_产品开发\cimatron二次开发\`（执行文件在外置仓库，vault 只存 md）
+- 代码与工具 → `D:\repos\My project workspace\产品开发\淬锋应用\`（执行文件在外置仓库，vault 只存 md）
