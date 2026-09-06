@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(*ls*)",
+      "Read(d:/My knowledge vault/**)"
+    ],
+    "deny": [
+      "Edit(60_存档/**)",
+      "Write(60_存档/**)",
+      "Edit(20_专业领域/01_非标设计/_原始资料/**)",
+      "Write(20_专业领域/01_非标设计/_原始资料/**)",
+      "Edit(20_专业领域/02_数控编程/_原始资料/**)",
+      "Write(20_专业领域/02_数控编程/_原始资料/**)",
+      "Edit(.git/**)",
+      "Write(.git/**)"
+    ],
+    "additionalDirectories": [
+      "D:/repos/My project workspace"
+    ]
+  }
+}

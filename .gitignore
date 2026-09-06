@@ -1,0 +1,83 @@
+# ─── 密钥与凭证 ───
+.env
+.env.*
+*.pem
+*.key
+
+# ─── 脚本备份文件（改路径/批量替换前的可回滚副本，不进 GitHub）───
+*.bak
+*.prerename_bak
+*.prerename_repos_bak
+*.polish_bak
+
+# ─── 操作系统隐藏文件 ───
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── Node.js ───
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ─── Obsidian 排除 ───
+.obsidian/
+
+# ─── Syncthing 同步（本地同步工具，不进 GitHub）───
+.stfolder/
+.stignore
+*.sync-conflict-*
+.stversions/
+
+# ─── 本地脚本输出 ───
+scripts/*.log
+scripts/*.tmp
+
+# ─── 编辑器临时文件 ───
+*.swp
+*.swo
+*~
+.vscode/settings.json
+.vscode/launch.json
+
+# ─── 大型二进制文件（机械设计 / 3D / CAD）───
+# 注意：Git 的 ignore 匹配大小写敏感，Windows/SolidWorks 常导出大写扩展名，
+# 每个类型必须大小写两种形式都写，否则大写后缀的文件会漏进版本库。
+*.SLDASM
+*.sldasm
+*.SLDPRT
+*.sldprt
+*.SLDDRW
+*.slddrw
+*.x_t
+*.X_T
+*.x_b
+*.X_B
+*.STEP
+*.step
+*.STP
+*.stp
+*.IGS
+*.igs
+*.iges
+*.IGES
+*.dwg
+*.DWG
+*.Dwg
+*.zip
+*.ZIP
+*.rar
+*.RAR
+*.7z
+*.7Z
+*.xlsx
+*.XLSX
+*.xlsm
+*.XLSM
+*.pdf
+*.PDF
+
+# ─── WorkBuddy 工作区 ───
+.workbuddy/*
+!.workbuddy/memory/
